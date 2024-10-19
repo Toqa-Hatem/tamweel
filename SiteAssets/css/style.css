@@ -63,7 +63,7 @@ p {
     font-size: 1.15rem;
 }
 
-.btn {
+.btn, .btn-details{
     padding: 0.65rem 2.5rem;
     box-shadow: none;
     color: #fff;
@@ -74,7 +74,9 @@ p {
     font-weight: 700;
 
 }
-
+.btn-details:hover{
+    background-color:#C1A830;
+}
 .btn:focus {
     outline: 0;
     box-shadow: none;
@@ -104,7 +106,7 @@ p {
 }
 .onScroll{
     position: fixed;
-    bottom: 2%;
+    bottom: 7%;
     right: 2%;
     z-index: 4;
 }
@@ -409,8 +411,105 @@ footer .copyRights{
     color: #6c757d;
     content: var(--bs-breadcrumb-divider, ">");
 }
+.contact p{
+    color: #5A5959;
+}
+.border-container{
+    border: 0.5px solid #c5c1c1;
+    border-radius: 20px;
+}
+.input-group {
+    position: relative; 
+}
+.contact input, .contact select, .input-group input{
+    border: 0.2px solid #e2dfdf;
+    padding: 5px;
+    height: 45px;
+}
+input::placeholder, .selected-option{
+font-size: 0.8rem;
+font-weight: 400;
+line-height: 29.98px;
+text-align: right;
+color: #A9A8A9;
+}
+.custom-dropdown {
+    position: relative;
+}
+.dropdown-toggle {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dropdown-menu {
+    display: none; 
+    position: absolute;
+    width: 100%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    z-index: 1000;
+    top: 40px;
+    height: 12vh;
+    overflow-y: scroll;
+    text-align: right;
+}
+.dropdown-menu.show {
+    display: block; 
+}
+.dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+}
 
+.contact label{
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 44.98px;
+    text-align: right;
+}
+.country-code{
+    border-right:none;
+    border: 0.5px solid #A9A8A9;
+    color: #A9A8A9;
+    border-top-left-radius: 10px !important;    
+    border-bottom-left-radius: 10px !important; 
+}
+@keyframes vibrate {
+    0% { transform: rotate(0); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+    100% { transform: rotate(0); }
+  }
+  
+  .vibrate {
+    animation: vibrate 0.5s ease-in-out infinite;
+  }
+  .card{
+    border-radius: 10px;
+  }
+  .car-card img {
+    width: 100%;   
+    height:16vh;  
+  }
+  .btn-details{
+    background-color: #0074AE;
+    text-align: center;
+    width: 100%;
+    box-shadow: none;
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
 
+  
 @media(max-width: 1024px) {}
 
 @media(max-width: 992px) {
