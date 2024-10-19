@@ -69,7 +69,9 @@ p {
     color: #fff;
     background: #C1A830;
     border: 2px solid transparent;
-    border-radius: 10px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 700;
 
 }
 
@@ -99,12 +101,25 @@ p {
 .title {
     font-size: 2.7rem;
     font-weight: 800;
-    color: #0873AE;
 }
+.onScroll{
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    z-index: 4;
+}
+.onScroll img{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px 0px;
+    height: 65px;
+    width:65px;
+    object-fit: contain;
+    border-radius: 50%;
 
+}
 /*--- navbar styling ---*/
 header .navbar {
     background-color: #fff;
+    box-shadow: 0 0 10px #00000029;
 }
 
 header .navbar-toggler {
@@ -115,9 +130,6 @@ header .navbar-toggler:focus {
     box-shadow: none;
 }
 
-header .navbar .navbar-service {
-    margin-right: 1rem;
-}
 
 header .navbar .navbar-service img {
     height: 100%;
@@ -128,9 +140,9 @@ header .navbar .navbar-service img {
 
 header .navbar-light .navbar-nav .nav-link {
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 700;
     margin: 0;
-    padding: 3rem;
+    padding:  2.85rem;
     transition: all .3s ease-in-out;
     color: #002132;
     position: relative;
@@ -221,14 +233,14 @@ header.scroll .navbar-light .navbar-nav .nav-link {
 /************ intro section **********/
 .intro {
     position: relative;
-    margin-top: 120px;
+    margin-top: 110px;
 }
 
 
 .intro video {
     width: 100%;
     object-fit: cover;
-    height: calc(100vh - 120px);
+    height: calc(100vh - 110px);
 
 }
 /************ about section **********/
@@ -247,8 +259,61 @@ header.scroll .navbar-light .navbar-nav .nav-link {
     object-position: left;
 
 }
-/*------- partner section ------*/
+/* ----------vision section ----------*/
+.vision .item{
+    padding: 2.5rem 1.25rem;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+    text-align: center;
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
+.vision .item img{
+    height: 80px;
+    width: 80px;
+    object-fit: contain;
+}
+
+/*------- partner section ------*/
+.partners{
+    position: relative;
+    background: url(../images/parteners-bg.png) center no-repeat;
+    z-index: 2;
+    color: #fff;
+    background-size: cover;
+}
+/* .partners-carousel {
+    width: 60%!important;
+} */
+ .partners::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background: rgba(0, 33, 50, 0.57);
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+ }
+.partners-carousel .item {
+    height: 175px;
+    width: 275px;
+    overflow: hidden;
+    /* padding: 1rem; */
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+    transition: all .4s cubic-bezier(.22, .61, .36, 1);
+}
+.partners-carousel .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 .owl-carousel .owl-nav .owl-prev {
     position: absolute;
     background-color: transparent !important;
@@ -267,11 +332,11 @@ header.scroll .navbar-light .navbar-nav .nav-link {
 }
 
 .owl-nav .owl-prev {
-    right: 0;
+    left: 0;
 }
 
 .owl-nav .owl-next {
-    right: 0;
+   right: 0;
 }
 
 .owl-carousel .owl-nav .owl-prev {
@@ -292,13 +357,59 @@ header.scroll .navbar-light .navbar-nav .nav-link {
 }
 
 .owl-nav span {
-    font-size: 4rem;
+    font-size: 2rem;
     color: #0873AE;
-    margin: 10px -5px;
+}
+/*----------- values section ---------*/
+.values .item{
+    padding: 2.5rem 1.25rem;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+    text-align: center;
+    min-height: 175px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.values .item img{
+    height: 50px;
+    width: 100%;
+    object-fit: contain;
+}
+.values .value-img img{
+    width: 100%;
+    height: 575px;
+    object-fit: contain;
+}
+/*----- footer -----*/
+footer{
+    background: #F4F7FB;
+
+}
+footer .copyRights{
+    background:#0074AE ;
+    text-align: center;
+    overflow: hidden;
+    padding: 0.5rem;
+    color: #fff;
+}
+/*-------- inner header ---------*/
+.inner-header{
+    margin-top: 120px;
+    font-size: 1.25rem;
+}
+.inner-header .container{
+    border-bottom: 0.5px solid #A9A5A5;
+
+}
+.breadcrumb-item+.breadcrumb-item::before {
+    float: right;
+    padding-left: .5rem;
+    color: #6c757d;
+    content: var(--bs-breadcrumb-divider, ">");
 }
 
-
-/*----- footer -----*/
 
 @media(max-width: 1024px) {}
 
