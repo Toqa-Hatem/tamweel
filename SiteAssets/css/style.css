@@ -60,6 +60,7 @@ a:hover {
 
 p {
     line-height: 1.8;
+    font-size: 1.15rem;
 }
 
 .btn {
@@ -243,6 +244,7 @@ header.scroll .navbar-light .navbar-nav .nav-link {
     width: 100%;
     height: 475px;
     object-fit: contain;
+    object-position: left;
 
 }
 /*------- partner section ------*/
